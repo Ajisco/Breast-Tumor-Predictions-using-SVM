@@ -28,8 +28,8 @@ def index():
         
 
 if __name__ == '__main__':
-    app.run(debug= True, use_reloader=False)
-    app.config['TEMPLATES_AUTO_RELOAD']=False
+    app.run(debug= True)
+    
     
     
      
