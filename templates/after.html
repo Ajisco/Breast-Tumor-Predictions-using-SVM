@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Result</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}" />
+		<link  rel="icon" href="{{url_for('static', filename='assets/images/pink.png')}}" />
+	</head>
+	<body style="font-family: sans-serif;" class="is-preload">
+
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div>
+						<center><h2 style="color: white;background-color: black;">BREAST TUMOUR PREDICTION RESULT</h2></center>
+
+					
+				</div>
+
+				{%if data == 0%}
+
+			<!-- Main -->
+				<section class="wrapper style1">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-8 col-12-narrower">
+								<div id="content">
+
+									<!-- Content -->
+
+										<article>
+											<header>
+												<h2>The Breast Tumour is <span style="color: white; background-color: red;"> MALIGNANT</span></h2>
+												<p>Malignant Breast Tumours are also called <b>Breast Cancers</b>.</p>
+											</header>
+
+											<span class="image featured"><img style="max-height: 25em; max-width: 25em;" src="{{url_for('static', filename='images/malig.jfif')}}" alt="" /></span>
+
+											<p>Breast cancer is a malignant tumor that arises within the tissues of the breast. Breast cancer occurs in both men and women.</p>
+
+											<h3>Disclaimer:</h3>
+											<p>The result above is the prediction from artificial intelligence inform of machine learning and it is not completely accurate. Hence, it does not in anyway replace medical diagnosis or intervention.</p>
+
+											<p> You are adviced to visit your doctor for proper medical assessments. Thanks!</p>
+										</article>
+
+								</div>
+							</div>
+							<div class="col-4 col-12-narrower">
+								<div id="sidebar">
+
+									<!-- Sidebar -->
+
+										<section>
+											<h3>About Breast Cancer</h3>
+											<p>Early stage breast cancer usually doesn’t cause any symptoms or signs.
+                                            Sometimes it is possible to feel a lump in the breast, but it is important to remember that most breast lumps are not cancerous (most are benign).
+                                            Breast cancer is usually not painful..</p>
+											<footer>
+												<a style="font-size: 22px" href="https://www.emedicinehealth.com/breast_cancer/article_em.htm" class="link">Continue Reading</a>
+											</footer>
+										</section>
+
+										<section>
+											<h3>More interesting articles on Breast Cancer</h3>
+											<ul class="links">
+												<li><a href="https://www.medicalnewstoday.com/articles/316558?source=native&medium=ntd&correlationId=e8fe53fe-cbb7-4eaa-af6f-9ed4efe587f3">Metastatic Breast Cancer: What You Should Know</a></li>
+												<li><a href="https://www.medicalnewstoday.com/articles/179457.php">Breast cancer in males.</a></li>
+												<li><a href="https://www.cancer.org/cancer/breast-cancer/understanding-a-breast-cancer-diagnosis/stages-of-breast-cancer.html">Stages of breast cancer</a></li>
+												
+											</ul>
+											<footer>
+												<a href="/" class="button">Go back to Home</a>
+											</footer>
+										</section>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				{%else%}
+				<section class="wrapper style1">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-8 col-12-narrower">
+								<div id="content">
+
+									<!-- Content -->
+
+										<article>
+											<header>
+												<h2>The Breast Tumour is <span style="color: white; background-color: blue;"> BENIGN</span></h2>
+												<p>Bening Breast Tumours are less harmful and are <b>different from </b> Breast Cancers.</p>
+											</header>
+
+											<span class="image featured"><img style="max-height: 20em; max-width: 20em;" src="{{url_for('static', filename='images/bening2.jfif')}}" alt="" /></span>
+
+											<p>Benign (non-cancerous) breast conditions are very common, and most women have them. In fact, most breast changes are benign.</p>
+
+											<h3>Disclaimer:</h3>
+											<p>The result above is the prediction from artificial intelligence inform of machine learning and it is not completely accurate. Hence, it does not in anyway replace medical diagnosis or intervention.</p>
+
+											<p> You are adviced to visit your doctor for proper medical assessments. Thanks!</p>
+										</article>
+
+								</div>
+							</div>
+							<div class="col-4 col-12-narrower">
+								<div id="sidebar">
+
+									<!-- Sidebar -->
+
+										<section>
+											<h3>About Benign Breast Tumours</h3>
+											<p>There are many possible causes of non-cancerous (benign) breast lumps. Two of the most common causes of benign single breast lumps are cysts and fibroadenomas. In addition, several other conditions can present themselves as lumps, such as fat necrosis and sclerosing adenosis..</p>
+											<footer>
+												<a style="font-size: 22px;" href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/common-benign-lumps#:~:text=There%20are%20many%20possible%20causes,fat%20necrosis%20and%20sclerosing%20adenosis." class="">Continue Reading</a>
+											</footer>
+										</section>
+
+										<section>
+											<h3>More interesting articles on Benign Breast Tumours</h3>
+											<ul class="links">
+												<li><a href="https://www.mayoclinic.org/diseases-conditions/fibroadenoma/symptoms-causes/syc-20352752">Fibroadenoma - Symptoms and causes</a></li>
+												<li><a href="https://www.cancer.org/cancer/breast-cancer/non-cancerous-breast-conditions.html">Non-Cancerous Breast Conditions</a></li>
+												<li><a href="https://www.webmd.com/breast-cancer/guide/benign-breast-lumps">Breast Lumps: Causes and When to Call a Doctor</a></li>
+												
+											</ul>
+											<footer>
+												<a href="/" class="button">Go back to Home</a>
+											</footer>
+										</section>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				{%endif%}
+
+			<!-- Footer -->
+				
+				<div id="footer">
+					
+
+					<!-- Icons -->
+						<ul class="icons">
+							<li><a href="https://twitter.com/Dayo_Ajisco" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.facebook.com/ajibade.abdulqudus.7" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/Ajisco" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/ajibade-abdulquddus-ab5237159" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							<li><a href="ajiscomorac@gmail.com" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li>
+							<li><a href="https://www.instagram.com/dayo_ajisco" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://wa.me/+2349030987312" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+						</ul>
+
+					<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy;  <a href="http://ajisco.netlify.app">Ajisco.</a> All rights reserved</li>
+							</ul>
+						</div>
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{{url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/jquery.dropotron.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/browser.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/breakpoints.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/util.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+
+	</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Breast Tumour Prediction</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}" />
+		<link  rel="icon" href="{{url_for('static', filename='assets/images/pink.png')}}" />
+	</head>
+	<body class="is-preload" style="font-family: sans-serif;">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Logo -->
+						<h1 style="background-color: grey; color: white; padding-top: 1em; height:4em; font-size: 23px;">PREDICTION OF TYPE OF BREAST TUMOUR</h1>
+						<hr>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="index.html">Home</a></li>
+								<li>
+								<li><a href="#predict">Predict</a></li>
+								<li><a href="#author">Author</a></li>
+								<li><a href="#Contact">Contact</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Banner -->
+				<section id="banner">
+					<header>
+						<h3><b>This is a Machine Learning model for predicting whether a breast tumour is Malignant or Bening. </h3></p>
+					</header>
+				</section>
+
+			<!-- Highlights -->
+					<div class="container">
+							<section  class="col-4 col-12-narrower">
+								<p></p><p>The model used is the <b>Support Vector Machine</b> and the data-set trained is a copy of UCI ML Breast Cancer Wisconsin (Diagnostic) <a href="https://goo.gl/U2Uwz2"><b>datasets</b>. </a>.The exploratory data analysis can be found in this <a href="https://github.com/Ajisco/Breast-Tumor-Predictions-using-SVM/blob/master/Breast%20Tumor%20Predictions%20using%20SVM.ipynb">notebook</a> and the codes can be found in this <a href="https://github.com/Ajisco/Breast-Tumor-Predictions-using-SVM">repository</a> </p>
+								<p>The user is expected to input some values (in numbers) as instructed based on the observed properties of the tumour which help the machine to predict the kind of tumour.</br>
+							</p>
+							<p>The model can be improved  by getting better data sets which could produce more accurate results and could be specific to localities.</p>
+							<p><u>Note for user:</u> Make sure you input numbers (could have decimals or not) and the values are within the range of the values provided in the input.</p>
+							</section>
+						
+					</div>
+					<hr>
+				<!-- Gigantic Heading -->
+				<section class="wrapper style2" id="predict">
+					<div class="container">
+						<header class="major">
+							<h2>Predict your Breast Tumour! </h2>
+
+							<p><b>Hello friend! Fill the inputs below with the correct values to predict your breast tumour.</b>
+							</p>
+							
+						</header>
+					</div>
+					<section id="main" class="container medium">
+					
+					<div " class="box">
+						<form style="position: relative; text-align: center;" method="POST" action="{{url_for('index')}}">
+							<div style="font-size: 15px;" class="row gtr-50 gtr-uniform">
+								<div class="col-6 col-6-mobilep">
+								Mean Radius</br>
+									<input type="number" name="a" step="any" min="7.0" max="28.0" value="" placeholder=" 7.0 to 28.0" />
+								</div>
+								<div class="col-6 col-6-mobilep">
+								Mean Perimeter</br>
+									<input type="number" name="b" step="any" min="43.8" max="188.5" value="" placeholder="43.8 to 188.5" />
+								</div>
+								<div class="col-6 col-6-mobilep">
+								Mean Area</br>
+									<input type="number" name="c" step="any" min="143.5" max="2501.0" value=""placeholder="143.5  2501.0" />
+								</div>
+								<div class="col-6 col-6-mobilep">
+								Mean Concave Points</br>
+									<input type="number" name="d" step="any" min="0.0" max="0.2" value=""placeholder=" 0.0 to 0.2" />
+								</div>
+								
+								<div class="col-6 col-6-mobilep">
+								Worst Radius</br>
+									<input type="number" name="e" step="any" min="7.93" max="36.0" value="" placeholder="7.93 to 36.0" />
+								</div>
+								
+								<div class="col-6 col-6-mobilep">
+								Worst Perimeter</br>
+									<input type="number" name="f" step="any" min="50.5" max="251.2" value="" placeholder=" 50.5 to 251.2" />
+								</div>
+								<div class="col-6 col-6-mobilep">
+								Worst Area</br>
+									<input type="number" name="g" step="any" min="185.2" max="4254.0" value=""placeholder=" 185.2 to 4254.0" />
+								</div>
+								
+								<div class="col-6 col-6-mobilep">
+								Worst Concave Points</br>
+									<input type="number" name="h" step="any" min="0.0" max="0.3" value="" placeholder=" 0.0  to  0.3" />
+								</div>
+								
+								
+								<div class="col-12">
+									<ul class="actions special">
+										<li><input type="submit" value="Predict" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+
+				</section>
+				
+
+<section class="wrapper style1" id="author">
+					<div id="header">
+						<h1 style="background-color: black; color: white; padding-top: 0.6em; height:2.8em; font-size: 20px;">About the Author</h1>
+					</div><div class="container">
+								<div style="border-radius: 50px;border: 0;display: inline-block;position: relative; max-width: 40%; float: left;padding: 1.5em 1.5em 1em 0;top: 0.25em;" class="inner">
+									<a href="https://ajisco.netlify.app" ><img style="border-radius: 70px;display: block;width: 100%; position: relative; max-height: 15em;" src="{{url_for('static', filename='images/me.jpg')}}" alt="" /></a></div>
+									<div class="content" style="padding: 2.5em 1.5em 1em 0;top: 3.25em;" >
+										<h2 class="major">Hi! I'm Ajibade Abdulquddus A.</h2>
+										<p>I'm a Data Scientist and a Software Developer 🕵🏽‍♂️ . I am also a medical student in the College Of Medicine, University of Ibadan. I'm a dedicated goal-setter with great interest in problem solving with Data Science, Software Development, Research and Innovation.
+											I have built and published different machine learning models that solve different problems (Health, finance, etc.) You can check out my projects <a href="#projects">Here </a> or go to my <a href="https://ajisco.netlify.app">portfolio website </a> or my <a href="https://github.com/Ajisco">GitHub</a> page.
+										You can also connect with me on any of my <a href="#Contact">social media handles</a> . 
+										</p>
+										<a href="https://ajisco.netlify.app" class="button">My Portfolio</a>
+									
+								</div></div></section>
+							
+			<!-- Posts -->
+				<section class="wrapper style1" id="projects">
+					<div id="header">
+						<h1 style="background-color: grey; color: white; padding-top: 0.6em; height:2.8em; font-size: 25px;">Some other models by me</h1>
+					</div>
+						<hr>
+					<div class="container">
+						<div class="row">
+							<section class="col-6 col-12-narrower">
+								<div class="box post">
+									<a href="https://github.com/Ajisco/Kyphosis-Prediction-Using-Random-Forest/blob/master/Kyphosis%20Prediction%20%20Using%20Random%20Forest.ipynb" class="image left"><img src="{{url_for('static', filename='images/pic01.jpeg')}}" alt="" /></a>
+									<div class="inner">
+										<h3><a href="https://github.com/Ajisco/Kyphosis-Prediction-Using-Random-Forest/blob/master/Kyphosis%20Prediction%20%20Using%20Random%20Forest.ipynb">Predicting surgery succcess for Kyphosis</a></h3>
+										<p>Kyphosis is a disorder of the vertebrae column and it is mostly corrected by surgery. This model helps to predict the success of the surgery to correct Kyphosis.</p>
+									</div>
+								</div>
+							</section>
+							<section class="col-6 col-12-narrower">
+								<div class="box post">
+									<a href="https://github.com/Ajisco/Universities-Clustering-using-Kmeans/blob/master/Universities%20Clustering%20using%20Kmeans.ipynb" class="image left"><img src="{{url_for('static', filename='images/pic02.png')}}" alt="" /></a>
+									<div class="inner">
+										<h3><a href="https://github.com/Ajisco/Universities-Clustering-using-Kmeans/blob/master/Universities%20Clustering%20using%20Kmeans.ipynb">Public or Private University?</a></h3>
+										<p>The major classifications of schools, universities and colleges is into private and public. This model helps to predict if a school is private or public.</p>
+									</div>
+								</div>
+							</section>
+						</div>
+						<div class="row">
+							<section class="col-6 col-12-narrower">
+								<div class="box post">
+									<a href="https://github.com/Ajisco/Loan-Predictions-using-Random-Forests/blob/master/Loan%20Predictions%20using%20Random%20Forests.ipynb" class="image left"><img src="{{url_for('static', filename='images/pic03.jpg')}}" alt="" /></a>
+									<div class="inner">
+										<h3><a href="https://github.com/Ajisco/Loan-Predictions-using-Random-Forests/blob/master/Loan%20Predictions%20using%20Random%20Forests.ipynb">Customer Loan repayment</a></h3>
+										<p>Many loaning companies love to know about the success of their business. The model helps loaning companies to predict whether or not a customer will pay back loan in full .</p>
+									</div>
+								</div>
+							</section>
+							<section class="col-6 col-12-narrower">
+								<div class="box post">
+									<a href="https://github.com/Ajisco/SVM-on-Iris-Flower-Data/blob/master/SVM%20on%20Iris%20Flower%20Data.ipynb" class="image left"><img src="{{url_for('static', filename='images/pic04.jpg')}}" alt="" /></a>
+									<div class="inner">
+										<h3><a href="https://github.com/Ajisco/SVM-on-Iris-Flower-Data/blob/master/SVM%20on%20Iris%20Flower%20Data.ipynb">Iris Flower Type</a></h3>
+										<p>The Iris Flower dataset is a very popular one for machine learning models. This model helps to prwedict the type of Iris flower.</p>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</section>
+
+			<!-- CTA -->
+				<section id="cta" class="wrapper style3">
+					<div class="container">
+						<header>
+							<h2>Do you want to see more?</h2>
+							<a href="https://github.com/Ajisco" class="button">Click Here!</a>
+						</header>
+					</div>
+				</section>
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+							<section class="col-3 col-6-narrower col-12-mobilep">
+								<h3>Exploratory Data Analysis</h3>
+								<ul style="color: grey; font-size: 13px;" class="links">
+									<li><a href="https://github.com/Ajisco/911-Calls-Project/blob/master/911%20Calls%20Data%20Capstone%20Project%20.ipynb">911 calls EDA</a></li>
+									<li><a href="https://github.com/Ajisco/Finance-Data-Project/blob/master/Finance%20Project%20.ipynb">Company's finance EDA </a></li>
+									<li><a href="https://github.com/Ajisco/SVM-on-Iris-Flower-Data/blob/master/SVM%20on%20Iris%20Flower%20Data.ipynb">Iris Flower EDA</a></li>
+									<li><a href="https://github.com/Ajisco/Breast-Tumor-Predictions-using-SVM/blob/master/Breast%20Tumor%20Predictions%20using%20SVM.ipynb">Breast Tumour EDA</a></li>
+									<li><a href="https://github.com/Ajisco/Logistic-Regression-on-Advert-Success/blob/master/Logistic%20Regression%20on%20Advert%20Success.ipynb">Ads Click EDA</a></li>
+								</ul>
+							</section>
+							<section class="col-3 col-6-narrower col-12-mobilep">
+								<h3>More Deployed ML Models</h3>
+								<ul style="color: grey; font-size: 13px;" class="links">
+									<li><a href="https://github.com/Ajisco/Kyphosis-Prediction-Using-Random-Forest/blob/master/Kyphosis%20Prediction%20%20Using%20Random%20Forest.ipynb">Surgery succcess for Kyphosis</a></li>
+									<li><a href="https://github.com/Ajisco/Universities-Clustering-using-Kmeans/blob/master/Universities%20Clustering%20using%20Kmeans.ipynb">Public or Private University?</a></li>
+									<li><a href="https://github.com/Ajisco/Loan-Predictions-using-Random-Forests/blob/master/Loan%20Predictions%20using%20Random%20Forests.ipynb">Customer Loan repayment</a></li>
+									
+									<li><a href="https://github.com/Ajisco/Movie-Recommendation-using-ML/blob/master/Movie%20Recommendation%20using%20ML.ipynb">Movie Recommendation</a></li>
+									<li><a href="https://github.com/Ajisco/NLP-of-Company-Reviews/blob/master/NLP%20of%20Yelp%20reviews.ipynb">NLP of Company Reviews</a></li>
+									
+								</ul>
+							</section>
+							<section class="col-6 col-12-narrower">
+								<h3>Get In Touch</h3>
+								<form>
+									<div class="row gtr-50">
+										<div class="col-6 col-12-mobilep">
+											<input type="text" name="name" id="name" placeholder="Name" />
+										</div>
+										<div class="col-6 col-12-mobilep">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="col-12">
+											<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+										</div>
+										<div class="col-12">
+											<ul class="actions">
+												<li><input type="submit" class="button alt" value="Send Message" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</section>
+						</div>
+					</div>
+
+					<!-- Icons -->
+						<ul class="icons">
+							<li><a href="https://twitter.com/Dayo_Ajisco" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.facebook.com/ajibade.abdulqudus.7" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/Ajisco" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/ajibade-abdulquddus-ab5237159" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							<li><a href="ajiscomorac@gmail.com" class="icon brands fa-google-plus-g"><span class="label">Google+</span></a></li>
+							<li><a href="https://www.instagram.com/dayo_ajisco" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://wa.me/+2349030987312" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+						</ul>
+					<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy;  <a href="http://ajisco.netlify.app">Ajisco.</a> All rights reserved</li>
+							</ul>
+						</div>
+
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{{url_for('static', filename='assets/js/jquery.dropotron.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/browser.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/breakpoints.min.js')}}"></script>
+			<script src="{{url_for('static', filename='assets/js/main.js')}}"></script>
+
+		</body>
+</html>
