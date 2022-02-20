@@ -6,7 +6,6 @@ model= pickle.load(open('breast_flask.pkl', 'rb'))
 
 app= Flask(__name__)
 
-#Train model
 @app.route('/')
 def man():
     return render_template('index.html')
