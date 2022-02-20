@@ -1,4 +1,5 @@
+python>=3.9.10
 Flask>=1.0.2
 numpy>=1.19.5
 gunicorn>=19.9.0
-pickle>=4.0
+pickle>=4.0.0
