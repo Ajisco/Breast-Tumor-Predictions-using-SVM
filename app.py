@@ -1,10 +1,25 @@
+import pandas as pd
 import numpy as np
+from sklearn.datasets import load_breast_cancer
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
+from sklearn.model_selection import GridSearchCV
 from flask import Flask, request, render_template
-import pickle
-
-model= pickle.load(open('breast_flask.pkl', 'rb'))
 
 app= Flask(__name__)
+cancer = load_breast_cancer()
+df_feat = pd.DataFrame(cancer['data'],columns=cancer['feature_names'])
+X= df_feat[['mean radius','mean perimeter','mean area','mean concave points',
+            'worst radius','worst perimeter','worst area','worst concave points']]
+y= cancer.target
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=101)
+model = SVC()
+model.fit(X_train,y_train)
+param_grid = {'C': [0.1,1, 10, 100, 1000], 'gamma': [1,0.1,0.01,0.001,0.0001], 'kernel': ['rbf']} 
+grid = GridSearchCV(SVC(),param_grid,refit=True,verbose=3)
+model= grid.fit(X_train,y_train)
+
+
 
 @app.route('/')
 def man():
@@ -27,8 +42,12 @@ def index():
         
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(debug= True, use_reloader=False)
+    
+    
+     
+        
+        
     
     
     
