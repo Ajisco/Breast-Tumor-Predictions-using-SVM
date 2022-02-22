@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="{{url_for('static', filename='assets/css/main.css')}}" />
 		<link  rel="icon" href="{{url_for('static', filename='images/pink.png')}}" />
 	</head>
-	<body class="is-preload" style="font-family: sans-serif;">
+	<body class="is-preload" style="font-family: sans-serif; background-color: lightblue;">
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -26,9 +26,9 @@
 							<ul>
 								
 								
-								<li class="current"><a href="#predict">Predict</a></li>
-								<li><a href="#author">Creator</a></li>
-								<li><a href="#Contact">Contact</a></li>
+								<li class="current"><a href="#predict"><b>Predict</b></a></li>
+								<li class="current"><a href="#author">Author</a></li>
+								<li class="current"><a href="#Contact">Contact</a></li>
 							</ul>
 						</nav>
 
@@ -62,7 +62,7 @@
 				<section class="wrapper style2" id="predict">
 					<div class="container">
 						<header class="major">
-							<h2>Predict your Breast Tumour! </h2>
+							<h2 style="background-color: lightblue; color: white;">Predict your Breast Tumour! </h2>
 
 							<p><b>Hello friend! Fill the inputs below with the correct values to predict your breast tumour.</b>
 							</p>
@@ -71,7 +71,7 @@
 					</div>
 					<section id="main" class="container medium">
 					
-					<div style"background-color: pink;" class="box">
+					<div style="background-color: lightblue;" class="box">
 						<form style="position: relative; text-align: center;" method="POST" action="{{url_for('index')}}">
 							<div style="font-size: 15px;" class="row gtr-50 gtr-uniform">
 								<div class="col-6 col-6-mobilep">
@@ -201,7 +201,7 @@
 				</section>
 
 			<!-- Footer -->
-				<div id="footer">
+				<div style="background-color: #d3d4e0;" id="footer">
 					<div class="container">
 						<div class="row">
 							<section class="col-3 col-6-narrower col-12-mobilep">
