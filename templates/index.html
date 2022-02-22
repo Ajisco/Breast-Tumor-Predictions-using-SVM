@@ -25,10 +25,10 @@
 						<nav id="nav">
 							<ul>
 								
-								
+								<li class="current"><a href="#about">About</a></li>
 								<li class="current"><a href="#predict"><b>Predict</b></a></li>
 								<li class="current"><a href="#author">Creator</a></li>
-								<li class="current"><a href="#Contact">Contact</a></li>
+								
 							</ul>
 						</nav>
 
@@ -44,15 +44,16 @@
 			<!-- Highlights -->
 			<section class="wrapper style1">
 					<div class="container">
-							<section  class="col-4 col-12-narrower">
+							<section  id="about" class="col-4 col-12-narrower">
 								<p></p>
-								<h3><b>This is a Machine Learning model for predicting whether a breast tumour is <span style="color: white; background-color: red;"> MALIGNANT</span> or <span style="color: white; background-color: blue;"> BENIGN</span>. </h3></p>
+								<h3><b>This is a Machine Learning App for predicting whether a breast tumour is <span style="color: white; background-color: red;"> MALIGNANT</span> or <span style="color: white; background-color: blue;"> BENIGN</span>. </h3></p>
 								<p></p>
-								<p>The model used is the <b>Support Vector Machine</b> and the data-set trained is a copy of UCI ML Breast Cancer Wisconsin (Diagnostic) <a href="https://goo.gl/U2Uwz2"><b>datasets</b>. </a>.The exploratory data analysis can be found in this <a href="https://github.com/Ajisco/Breast-Tumor-Predictions-using-SVM/blob/master/Breast%20Tumor%20Predictions%20using%20SVM.ipynb">notebook</a> and the codes can be found in this <a href="https://github.com/Ajisco/Breast-Tumor-Predictions-using-SVM">repository</a> </p>
-								<p>The user is expected to input some values (in numbers) as instructed based on the observed properties of the tumour which help the machine to predict the kind of tumour.</br>
+								<p> The idea of the project is to reduce invasive procedures in the diagnosis of Breast Cancer and other related diseases. The Breast Predictor App will is better used by medical or health care professionals than for domestic use as some measurements involved would require some expertise. </p>
+								<p>The App is an AI application trained using Support Vector Machine and GridSearch CV. The data-set trained was a copy of UCI ML Breast Cancer Wisconsin (Diagnostic) <a href="https://goo.gl/U2Uwz2"><b>datasets</b>. </a> of more than 500 data points and 30 features out of which 8 most important features were selected for easy use.The exploratory data analysis can be found in this <a href="https://github.com/Ajisco/Breast-Tumor-Predictions-using-SVM/blob/master/Breast%20Tumor%20Predictions%20using%20SVM.ipynb">notebook</a> and the codes can be found in this <a href="https://github.com/Ajisco/Breast-Tumor-Predictions-using-SVM">repository</a> </p>
+								<p>The user is expected to input some values (in millimeters) as instructed based on the observed properties of the tumour which help the machine to predict the kind of tumour.</br>
 							</p>
 							<p>The model can be improved  by getting better data sets which could produce more accurate results and could be specific to localities.</p>
-							<p><u>Note for user:</u> Make sure you input numbers (could have decimals or not) and the values are within the range of the values provided in the input.</p>
+							<p><u>Note for user:</u> Make sure you input numbers (could have decimals or not) and the values should be within the range of the values provided in the input.</p>
 							</section>
 						
 					</div>
@@ -64,7 +65,7 @@
 						<header class="major">
 							<h2 style="background-color: black; color: white;">Predict your Breast Tumour! </h2>
 
-							<p><b>Hello friend! Fill the inputs below with the correct values to predict your breast tumour.</b>
+							<p><b>Hello friend! Fill the inputs below with the correct values (in mm) to predict your breast tumour.</b>
 							</p>
 							
 						</header>
