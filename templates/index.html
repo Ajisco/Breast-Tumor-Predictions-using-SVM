@@ -15,7 +15,7 @@
 
 					<!-- Logo -->
 						<div>
-						<center><h2 style="color: white;background-color: pink;">BREAST TUMOR PREDICTOR APP</h2></center>
+						<center><h2 style="color: white;background-color: black;">BREAST TUMOR PREDICTOR APP</h2></center>
 
 					
 				</div>
@@ -24,10 +24,10 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="#">Home</a></li>
 								
-								<li><a href="#predict">Predict</a></li>
-								<li><a href="#author">Author</a></li>
+								
+								<li class="current"><a href="#predict">Predict</a></li>
+								<li><a href="#author">Creator</a></li>
 								<li><a href="#Contact">Contact</a></li>
 							</ul>
 						</nav>
@@ -35,17 +35,18 @@
 				</div>
 
 			<!-- Banner -->
-				<section id="banner">
+				<section class="wrapper style1" id="banner">
 					<header>
 						
 					</header>
 				</section>
 
 			<!-- Highlights -->
+			<section class="wrapper style1">
 					<div class="container">
 							<section  class="col-4 col-12-narrower">
 								<p></p>
-								<h3><b>This is a Machine Learning model for predicting whether a breast tumour is Malignant or Bening. </h3></p>
+								<h3><b>This is a Machine Learning model for predicting whether a breast tumour is <span style="color: white; background-color: red;"> MALIGNANT</span> or <span style="color: white; background-color: blue;"> BENIGN</span>. </h3></p>
 								<p></p>
 								<p>The model used is the <b>Support Vector Machine</b> and the data-set trained is a copy of UCI ML Breast Cancer Wisconsin (Diagnostic) <a href="https://goo.gl/U2Uwz2"><b>datasets</b>. </a>.The exploratory data analysis can be found in this <a href="https://github.com/Ajisco/Breast-Tumor-Predictions-using-SVM/blob/master/Breast%20Tumor%20Predictions%20using%20SVM.ipynb">notebook</a> and the codes can be found in this <a href="https://github.com/Ajisco/Breast-Tumor-Predictions-using-SVM">repository</a> </p>
 								<p>The user is expected to input some values (in numbers) as instructed based on the observed properties of the tumour which help the machine to predict the kind of tumour.</br>
@@ -55,6 +56,7 @@
 							</section>
 						
 					</div>
+		</section>
 					<hr>
 				<!-- Gigantic Heading -->
 				<section class="wrapper style2" id="predict">
@@ -69,7 +71,7 @@
 					</div>
 					<section id="main" class="container medium">
 					
-					<div " class="box">
+					<div style"background-color: pink;" class="box">
 						<form style="position: relative; text-align: center;" method="POST" action="{{url_for('index')}}">
 							<div style="font-size: 15px;" class="row gtr-50 gtr-uniform">
 								<div class="col-6 col-6-mobilep">
