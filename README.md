@@ -12,7 +12,7 @@ This projects centers on building a predictive model to predict whether a breast
 <br><br><br>
 
 ## 📍 Data
-The dataset was in a tabular (CSV) format and was gotten from a research studies, which was subsequently cleaned and wrangled in preparation for machine learning.<br><br><br>
+The dataset was in a tabular (CSV) format and was gotten from UCI ML Breast Cancer Wisconsin (Diagnostic) datasets of more than 500 data points and 30 features out of which 8 most important features were selected for easy use [Here](https://goo.gl/U2Uwz2).<br><br><br>
 
 
 ## 📍 Skills and Technologies
