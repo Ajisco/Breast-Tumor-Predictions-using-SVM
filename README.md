@@ -30,7 +30,7 @@ The dataset was in a tabular (CSV) format and was gotten from UCI ML Breast Canc
 
 ## 📍 APP VIEW
 
-#### [Tumpred](https://tumpred.up.railway.app/)
+#### [Tumpred](https://tumorclass.onrender.com/)
 | | 
 |:-|
 | <img alt="Sami" src="https://github.com/Ajisco/Ajisco/blob/main/images/Tumpred.png">|
@@ -53,9 +53,9 @@ The dataset was in a tabular (CSV) format and was gotten from UCI ML Breast Canc
 
 ## 📍 DEPLOYMENT 🚀
 
-#### This app is deployed at [Render](https://railway.app/)
+#### This app is deployed at [Render](https://render.com/)
 	
-#### You can access it [Here](https://tumpred.up.railway.app/) <br><br><br>
+#### You can access it [Here](https://tumorclass.onrender.com/) <br><br><br>
 
 
 ## 📍 Limitations
